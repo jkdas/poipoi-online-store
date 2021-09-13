@@ -25,22 +25,6 @@ const showProducts = (products) => {
       `;
     document.getElementById("all-products").appendChild(div);
   });
-  // for (const product of allProducts) {
-  //   console.log(product);
-  //   const div = document.createElement("div");
-  //   div.classList.add("product");
-  //   div.innerHTML = `<div class="single-product">
-  //     <div>
-  //   <img class="product-image" src=${product.image}></img>
-  //     </div>
-  //     <h3>${product.title}</h3>
-  //     <p>Category: ${product.category}</p>
-  //     <h2>Price: $ ${product.price}</h2>
-  //     <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-  //     <button id="details-btn" class="btn btn-danger">Details</button></div>
-  //     `;
-  //   document.getElementById("all-products").appendChild(div);
-  // }
 };
 let count = 0;
 const addToCart = (id, price) => {
