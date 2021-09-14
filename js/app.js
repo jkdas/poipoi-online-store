@@ -11,18 +11,19 @@ const showProducts = (products) => {
   products.forEach(product => {
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
-      <div>
-    <img class="product-image" src=${product.image}></img>
-      </div>
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>   
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button>
-      <h4>Ratings: ${product.rating.rate}, Rating count: ${product.rating.count}</h4>
-      </div>
-      `;
+    div.innerHTML = `
+        <div class="single-product">
+            <div>
+                <img class="product-image" src=${product.image}></img>
+            </div>
+            <h3>${product.title}</h3>
+            <p>Category: ${product.category}</p>
+            <h2>Price: $ ${product.price}</h2>   
+            <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+            <button id="details-btn" class="btn btn-danger">Details</button>
+            <h4>Ratings: ${product.rating.rate}, Rating count: ${product.rating.count}</h4>
+        </div>
+    `;
     document.getElementById("all-products").appendChild(div);
   });
 };
